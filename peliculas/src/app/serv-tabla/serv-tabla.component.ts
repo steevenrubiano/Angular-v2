@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { ServTabla } from '../serv-tabla.service';
+import { ServTablaService } from '../serv-tabla.service';
 
 @Component({
   selector: 'app-serv-tabla',
   templateUrl: './serv-tabla.component.html',
   styleUrls: ['./serv-tabla.component.css'],
-  providers:[ServTabla]
+  providers:[ServTablaService]
 })
 export class ServTablaComponent implements OnInit {
   
   listaPeliculas: string[];
-  constructor(private servTabla: ServTabla) { 
+  constructor(private servTabla: ServTablaService) { 
     this.listaPeliculas = this.servTabla.listaPeliculas;
   }
 
