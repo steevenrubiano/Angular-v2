@@ -17,6 +17,6 @@ import { ServTablaComponent } from './serv-tabla/serv-tabla.component';
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,ServTablaComponent]
 })
 export class AppModule { }

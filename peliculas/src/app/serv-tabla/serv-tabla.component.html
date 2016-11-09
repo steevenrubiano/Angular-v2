@@ -1,3 +1,16 @@
-<p>
-  serv-tabla works!
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Autor</th>
+      <th>Año</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pelicula of listaPeliculas">
+      <td>{{pelicula.titulo}}</td>
+      <td>{{pelicula.autor}}</td>
+      <td>{{pelicula.anio}}</td>
+    </tr>
+  </tbody>
+</table>
