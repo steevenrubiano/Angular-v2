@@ -14,6 +14,15 @@ export class ServTablaComponent implements OnInit {
     this.listaPeliculas = this.servTabla.listaPeliculas;
   }
 
+  filterSort(){
+    //TODO: Ordenar filas al haccer click en las cabeceras
+    console.log("Funciona");
+    console.log(this.listaPeliculas[0].titulo);
+    for(let i=0; i<this.listaPeliculas.length; i++){
+      
+    }
+  }
+
   ngOnInit() {
   }
 
