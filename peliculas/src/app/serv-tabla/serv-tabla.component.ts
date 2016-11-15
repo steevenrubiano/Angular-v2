@@ -17,13 +17,13 @@ export class ServTablaComponent implements OnInit {
 
   sortTable(cabecera: string){
     console.log(cabecera);
-    if(cabecera=='titulo'){
+
+    if(cabecera=="titulo"){
       this.listaPeliculas.sort(function (a, b) {
         if (a.titulo > b.titulo) { return 1; }
         if (a.titulo < b.titulo) { return -1; }
         return 0; // a must be equal to b
       });
-      console.log(this.listaPeliculas);
     }
   }
 
