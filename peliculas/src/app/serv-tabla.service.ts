@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ServTablaService {
 
-  listaPeliculas: any[];
+  misPeliculas: any[];
   constructor() { 
-    this.listaPeliculas = [
+    this.misPeliculas = [
       {id:1, titulo:"Titanic", autor:"Y yo que se", anio:"2016"},
       {id:2, titulo:"Fas and Furious", autor:"Ni idea", anio:"2018"},
       {id:3, titulo:"REC", autor:"A saber", anio:"2012"},

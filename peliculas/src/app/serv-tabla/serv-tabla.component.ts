@@ -10,8 +10,9 @@ import { ServTablaService } from '../serv-tabla.service';
 export class ServTablaComponent implements OnInit {
   
   listaPeliculas: any[];
+
   constructor(private servTabla: ServTablaService) { 
-    this.listaPeliculas = this.servTabla.listaPeliculas;
+    this.listaPeliculas = this.servTabla.misPeliculas;
   }
 
   sortTable(cabecera: string){
