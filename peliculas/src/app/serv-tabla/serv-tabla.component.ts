@@ -10,25 +10,19 @@ import { ServTablaService } from '../serv-tabla.service';
 export class ServTablaComponent implements OnInit {
   
   listaPeliculas: any[];
-  queCabecera: string;
-
   constructor(private servTabla: ServTablaService) { 
     this.listaPeliculas = this.servTabla.listaPeliculas;
   }
 
   sortTable(cabecera: string){
-    //TODO: Ordenar filas al hacer click en las cabeceras
-    //Toda la informacion en internet, se puede sacar, VAMOS!
-    this.queCabecera = cabecera;
-        
+    console.log(cabecera);
     if(cabecera=='titulo'){
-      
-    }
-    if(cabecera=='autor'){
-      
-    }
-    if(cabecera=='anio'){
-      
+      this.listaPeliculas.sort(function (a, b) {
+        if (a.titulo > b.titulo) { return 1; }
+        if (a.titulo < b.titulo) { return -1; }
+        return 0; // a must be equal to b
+      });
+      console.log(this.listaPeliculas);
     }
   }
 

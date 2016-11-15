@@ -6,36 +6,11 @@ export class ServTablaService {
   listaPeliculas: any[];
   constructor() { 
     this.listaPeliculas = [
-      {
-        id:1,
-        titulo:"Primera peli",
-        autor:"Primer autor",
-        anio:"2014"
-      },
-      {
-        id:2,
-        titulo:"Segunda peli",
-        autor:"Segundo autor",
-        anio:"2015"
-      },
-      {
-        id:3,
-        titulo:"Tercera peli",
-        autor:"Tercer autor",
-        anio:"2016"
-      },
-      {
-        id:4,
-        titulo:"Cuarta peli",
-        autor:"Cuarto autor",
-        anio:"2017"
-      },
-      {
-        id:5,
-        titulo:"Quinta peli",
-        autor:"Quinto autor",
-        anio:"2018"
-      }
+      {id:1, titulo:"Titanic", autor:"Y yo que se", anio:"2016"},
+      {id:2, titulo:"Fas and Furious", autor:"Ni idea", anio:"2018"},
+      {id:3, titulo:"REC", autor:"A saber", anio:"2012"},
+      {id:4, titulo:"American History X", autor:"Pues no lo se", anio:"1925"},
+      {id:5, titulo:"Mision Imposible", autor:"Tampoco lo se", anio:"1993"}
     ];
   }
 }
