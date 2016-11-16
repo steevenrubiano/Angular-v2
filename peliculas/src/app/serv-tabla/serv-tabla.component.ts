@@ -19,25 +19,29 @@ export class ServTablaComponent implements OnInit {
 
   sortTable(cabecera: string){
     console.log(cabecera);
-
+    console.log(this.count);
+    
     if(this.count%2===0){
-    if(cabecera=="titulo"){
-      this.listaPeliculas.sort(function (a, b) {
-        if (a.titulo > b.titulo) { return 1; }
-        if (a.titulo < b.titulo) { return -1; }
-        return 0; // a must be equal to b
-      });
+      if(cabecera=="titulo"){
+        this.listaPeliculas.sort(function (a, b) {
+          if (a.titulo > b.titulo) { return 1; }
+          if (a.titulo < b.titulo) { return -1; }
+          return 0; // a must be equal to b
+        });
+      }
     }
-    }else{
-    if(cabecera=="titulo"){
-      this.listaPeliculas.sort(function (a, b) {
-        if (a.titulo < b.titulo) { return 1; }
-        if (a.titulo > b.titulo) { return -1; }
-        return 0; // a must be equal to b
-      });
-    }  
+    else{
+      if(cabecera=="titulo"){
+        this.listaPeliculas.sort(function (a, b) {
+          if (a.titulo < b.titulo) { return 1; }
+          if (a.titulo > b.titulo) { return -1; }
+          return 0; // a must be equal to b
+        });
+      }  
     }
+    
     this.count ++;
+    if(this.count > 1){ this.count = 0; }
   }
 
   ngOnInit() {
