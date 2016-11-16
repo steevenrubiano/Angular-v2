@@ -11,6 +11,7 @@ export class ServTablaComponent implements OnInit {
   
   listaPeliculas: any[];
   count: number;
+
   constructor(private servTabla: ServTablaService) { 
     this.listaPeliculas = this.servTabla.misPeliculas;
     this.count = 0;
@@ -18,6 +19,7 @@ export class ServTablaComponent implements OnInit {
 
   sortTable(cabecera: string){
     console.log(cabecera);
+
     if(this.count%2===0){
     if(cabecera=="titulo"){
       this.listaPeliculas.sort(function (a, b) {
