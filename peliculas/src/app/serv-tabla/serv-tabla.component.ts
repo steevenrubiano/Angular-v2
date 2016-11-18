@@ -22,26 +22,20 @@ export class ServTablaComponent implements OnInit {
     console.log(this.count);
     
     if(this.count%2===0){
-      if(cabecera=="titulo"){
-        this.listaPeliculas.sort(function (a, b) {
-          if (a.titulo > b.titulo) { return 1; }
-          if (a.titulo < b.titulo) { return -1; }
+        this.listaPeliculas.sort( (a, b)=>{
+          if (a[cabecera] > b[cabecera]) { return 1; }
+          if (a[cabecera] < b[cabecera]) { return -1; }
           return 0; // a must be equal to b
         });
-      }
     }
     else{
-      if(cabecera=="titulo"){
-        this.listaPeliculas.sort(function (a, b) {
-          if (a.titulo < b.titulo) { return 1; }
-          if (a.titulo > b.titulo) { return -1; }
+        this.listaPeliculas.sort( (a, b)=>{
+          if (a[cabecera] < b[cabecera]) { return 1; }
+          if (a[cabecera] > b[cabecera]) { return -1; }
           return 0; // a must be equal to b
         });
-      }  
     }
-    
     this.count ++;
-    if(this.count > 1){ this.count = 0; }
   }
 
   ngOnInit() {
