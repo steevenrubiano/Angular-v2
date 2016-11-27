@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
+import{ Peliculas } from './peliculas';
 
 @Injectable()
 export class ServTablaService {
 
-  misPeliculas: any[];
+  misPeliculas: Peliculas[];
   constructor() { 
     this.misPeliculas = [
-      {id:1, titulo:"Titanic", autor:"Y yo que se", anio:"2016"},
-      {id:2, titulo:"Fas and Furious", autor:"Ni idea", anio:"2018"},
-      {id:3, titulo:"REC", autor:"A saber", anio:"2012"},
-      {id:4, titulo:"American History X", autor:"Pues no lo se", anio:"2025"},
-      {id:5, titulo:"Mision Imposible", autor:"Tampoco lo se", anio:"1993"}
+      new Peliculas(1, "Titanic", "Y yo que se", "2016"),
+      new Peliculas(2, "Fas and Furious", "Ni idea", "2018"),
+      new Peliculas(3, "REC", "A saber", "2012"),
+      new Peliculas(4, "American History X", "Pues no lo se", "2025"),
+      new Peliculas(5, "Mision Imposible", "Tampoco lo se", "1993")
     ];
   }
 }

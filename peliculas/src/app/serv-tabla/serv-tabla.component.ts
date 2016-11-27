@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServTablaService } from '../serv-tabla.service';
+import{ Peliculas } from '../peliculas';
 
 @Component({
   selector: 'app-serv-tabla',
@@ -9,7 +10,7 @@ import { ServTablaService } from '../serv-tabla.service';
 })
 export class ServTablaComponent implements OnInit {
   
-  listaPeliculas: any[];
+  listaPeliculas: Peliculas[];
   count: number;
 
   constructor(private servTabla: ServTablaService) { 
