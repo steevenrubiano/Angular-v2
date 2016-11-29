@@ -12,10 +12,12 @@ export class ServTablaComponent implements OnInit {
   
   listaPeliculas: Peliculas[];
   count: number;
+  pelicula: Peliculas;
 
   constructor(private servTabla: ServTablaService) { 
     this.listaPeliculas = this.servTabla.misPeliculas;
     this.count = 0;
+    this.pelicula = new Peliculas(null,"","");
   }
 
   sortTable(cabecera: string){
