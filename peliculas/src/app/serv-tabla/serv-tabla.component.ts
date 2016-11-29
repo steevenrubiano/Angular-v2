@@ -17,13 +17,10 @@ export class ServTablaComponent implements OnInit {
   constructor(private servTabla: ServTablaService) { 
     this.listaPeliculas = this.servTabla.misPeliculas;
     this.count = 0;
-    this.pelicula = new Peliculas(null,"","");
+    this.pelicula = new Peliculas(null,"","","");
   }
 
   sortTable(cabecera: string){
-    console.log(cabecera);
-    console.log(this.count);
-    
     if(this.count%2===0){
         this.listaPeliculas.sort( (a, b)=>{
           if (a[cabecera] > b[cabecera]) { return 1; }
@@ -39,6 +36,13 @@ export class ServTablaComponent implements OnInit {
         });
     }
     this.count ++;
+  }
+
+  enviarFormulario(formulario: any){
+    console.log("Datos del formulario enviado: " + formulario);
+    console.log("Pelicula : " + this.pelicula);
+    this.pelicula.titulo = "Otro valor"; 
+    this.pelicula.titulo = formulario.titulo;
   }
 
   ngOnInit() {

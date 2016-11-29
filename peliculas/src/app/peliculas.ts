@@ -10,4 +10,7 @@ export class Peliculas {
             this.autor = autor;
             this.anio = anio;
     }
+    toString():string{
+        return this.id + "Pelicula: Titulo: " + this.titulo + " Autor:" + this.autor + " Año: " + this.anio;
+    }
 }
