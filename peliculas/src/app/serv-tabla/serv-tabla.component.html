@@ -1,4 +1,4 @@
-<form #form="ngForm" (ngSubmit)="enviarFormulario(form.value)">
+<form #form="ngForm">
   <div>
     <div>
       <label>Titulo</label>
@@ -16,7 +16,7 @@
     </div>
     <br/>
     <div>
-      <button type="submit">Gurdar</button>
+      <button type="submit" (click)="enviarFormulario(form.value)">Gurdar</button>
       <button type="submit">Modificar</button>
       <button type="submit">Borrar</button>
       <button type="submit">Limpiar</button>

@@ -43,6 +43,7 @@ export class ServTablaComponent implements OnInit {
     console.log("Pelicula : " + this.pelicula);
     this.pelicula.titulo = "Otro valor"; 
     this.pelicula.titulo = formulario.titulo;
+    this.listaPeliculas.push(this.pelicula);
   }
 
   ngOnInit() {
