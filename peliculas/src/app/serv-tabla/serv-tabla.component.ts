@@ -38,12 +38,13 @@ export class ServTablaComponent implements OnInit {
     this.count ++;
   }
 
-  enviarFormulario(formulario: any){
-    console.log("Datos del formulario enviado: " + formulario);
-    console.log("Pelicula : " + this.pelicula);
-    this.pelicula.titulo = "Otro valor"; 
-    this.pelicula.titulo = formulario.titulo;
+  guardarFormulario(formulario: any){
     this.listaPeliculas.push(this.pelicula);
+    this.pelicula = new Peliculas(null,"","","");
+  }
+
+  selecccionaFila(pelicula){
+    this.pelicula = pelicula;
   }
 
   ngOnInit() {
