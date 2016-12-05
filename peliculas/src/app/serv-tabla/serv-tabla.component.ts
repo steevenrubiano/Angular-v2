@@ -38,13 +38,25 @@ export class ServTablaComponent implements OnInit {
     this.count ++;
   }
 
+  selecccionaFila(pelicula){
+    this.pelicula = pelicula;
+  }
+
   guardarFormulario(formulario: any){
     this.listaPeliculas.push(this.pelicula);
     this.pelicula = new Peliculas(null,"","","");
   }
 
-  selecccionaFila(pelicula){
-    this.pelicula = pelicula;
+  modificarFormulario(formulario:any){
+    
+  }
+
+  borrarFormulario(formulario:any){
+    
+  }
+
+  limpiarFormulario(formulario: any){
+    
   }
 
   ngOnInit() {
