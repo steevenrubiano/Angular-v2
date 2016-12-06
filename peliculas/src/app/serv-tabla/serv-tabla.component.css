@@ -16,3 +16,7 @@ th:hover{
     cursor: pointer;
     background-color: lightgoldenrodyellow;
 }
+tr:hover{
+    cursor: pointer;
+    background-color: lightCyan;
+}

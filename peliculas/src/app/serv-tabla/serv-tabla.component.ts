@@ -17,7 +17,7 @@ export class ServTablaComponent implements OnInit {
   constructor(private servTabla: ServTablaService) { 
     this.listaPeliculas = this.servTabla.misPeliculas;
     this.count = 0;
-    this.pelicula = new Peliculas(null,"","","");
+    this.pelicula = new Peliculas(null,null,null,null);
   }
 
   sortTable(cabecera: string){
@@ -38,25 +38,29 @@ export class ServTablaComponent implements OnInit {
     this.count ++;
   }
 
-  selecccionaFila(pelicula){
+  getPeliculas(): Peliculas[]{
+    return this.listaPeliculas;
+  }
+  getPelicula(id: number): Peliculas{
+    return this.listaPeliculas[id];
+  }
+
+  selecccionaFila(pelicula: Peliculas){
     this.pelicula = pelicula;
   }
 
-  guardarFormulario(formulario: any){
+  guardarFormulario(pelicula: Peliculas){
     this.listaPeliculas.push(this.pelicula);
-    this.pelicula = new Peliculas(null,"","","");
+    this.pelicula = new Peliculas(null,null,null,null);
   }
 
-  modificarFormulario(formulario:any){
-    
+  modificarFormulario(pelicula: Peliculas){
+    this.pelicula = new Peliculas(null,null,null,null);
   }
 
-  borrarFormulario(formulario:any){
-    
-  }
-
-  limpiarFormulario(formulario: any){
-    
+  borrarFormulario(pelicula: Peliculas){
+    this.listaPeliculas.splice(this.listaPeliculas.indexOf(pelicula),1);
+    this.pelicula = new Peliculas(null,null,null,null);
   }
 
   ngOnInit() {
