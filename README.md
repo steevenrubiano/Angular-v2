@@ -1,1 +1,2 @@
-# peliculasAngular
+# Angular-v2
+APLICACION DE PELICULAS EN ANGULAR V2
